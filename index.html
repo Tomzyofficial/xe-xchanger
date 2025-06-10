@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-  <script src="scripts/index.mjs" type="module"></script>
-  <title>Xe-xchanger</title>
+  <link rel="icon" href="images/logo.webp">
+  <script src="scripts/main.js" type="module"></script>
+  <title>Home | Xe-xchanger</title>
 </head>
 
 <body>
@@ -21,6 +22,10 @@
       <a href="signin.html">Sign in</a>
       <span>
         <i class="fa fa-adjust"></i>
+        <ul>
+          <li class="light-mode" data-theme="light">Light mode</li>
+          <li class="dark-mode" data-theme="dark">Dark mode</li>
+        </ul>
       </span>
       <div class="nav-menu">
         <div class="menu-icon">
@@ -37,7 +42,7 @@
       </div>
       <div class="main-wrapper">
         <div class="top">
-          <input type="text" placeholder="Amount" name="amount">
+          <input type="text" placeholder="Amount (e.g. 5000)" name="amount" autocomplete="off">
           <div class="from-select">
             <select name="from-currency" id="from-currency">
               <option value="" selected>From</option>
@@ -58,7 +63,7 @@
           </div>
         </div>
         <div class="bottom">
-          <p id="error-message"></p>
+          <p id="message"></p>
           <button id="convert-btn">Convert</button>
         </div>
       </div>
@@ -81,8 +86,9 @@
   </section>
   <footer>
     <hr>
-    <p>&copy; <span id="current-year"></span> Xe-xchanger. All rights reserved.</p>
+    <p class="site-watermark">&copy; <span class="current-year">2025</span> Xe-xchanger. All rights reserved.</p>
   </footer>
+
 </body>
 
 </html>

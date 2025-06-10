@@ -12,6 +12,42 @@
   --foreground: #000000;
 }
 
+body {
+  color: var(--foreground);
+}
+
+/* Begin theme preference */
+body.dark {
+  background-color: #121212;
+  color: var(--white-color);
+}
+
+body.dark .top input {
+  background-color: var(--foreground);
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+}
+
+body.dark .top .from-select,
+body.dark .to-select {
+  background-color: var(--foreground);
+  border: 1px solid var(--white-color);
+}
+
+body.dark select {
+  background-color: var(--foreground);
+  color: var(--white-color);
+  border: none;
+  outline: none;
+}
+
+body.light {
+  background-color: var(--white-color);
+  color: var(--foreground);
+}
+
+/* End theme preference */
+
 header {
   background-color: var(--background);
   border-bottom: 1px solid var(--white-color);
@@ -44,7 +80,25 @@ nav span {
   cursor: pointer;
   color: var(--white-color);
   padding-right: 20px;
+  position: relative;
+}
 
+nav span ul {
+  list-style: none;
+  background-color: var(--white-color);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  width: 80px;
+  padding: 5px 5px;
+  line-height: 30px;
+  font-size: small;
+  position: absolute;
+  right: 0;
+  color: black;
+  display: none;
+}
+
+nav span ul.modeOpen {
+  display: block;
 }
 
 .nav-menu .menu-icon {
@@ -53,15 +107,7 @@ nav span {
   display: none;
 }
 
-/* .container {
-  background-color: var(--background);
-  height: 50vh;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-} */
-
 .content {
-  color: black;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -108,7 +154,6 @@ nav span {
 .to-select {
   position: inherit;
   width: 34%;
-  color: var(--foreground);
   border: 1px solid black;
   border-radius: 5px;
   background-color: var(--white-color);
@@ -139,8 +184,6 @@ select {
   right: 368px;
   bottom: 13px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  background-color: var(--white-color);
-  transition: transform 0.3s;
   border: 2px solid #ccc;
 
 }
@@ -165,6 +208,7 @@ button {
   color: var(--white-color);
   padding: 10px 20px;
   width: 25%;
+  height: 100%;
   border: none;
   border-radius: 5px;
   cursor: pointer;
