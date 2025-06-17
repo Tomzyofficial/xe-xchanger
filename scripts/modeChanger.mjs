@@ -1,13 +1,13 @@
 import { qs } from "./utils.mjs";
 import { setLocalStorage, getLocalStorage } from "./utils.mjs";
 
-// theme toggler
+// theme preference unordered list toggler
 export const modeSwitch = qs("nav span");
 modeSwitch.addEventListener("click", () => {
   qs("ul").classList.toggle("modeOpen");
 })
 
-// After contents load, load the localStorage
+// After contents load, load the localStorage to preserve theme preference 
 document.addEventListener("DOMContentLoaded", () => {
   let savedTheme = getLocalStorage("theme");
   if (savedTheme) {
