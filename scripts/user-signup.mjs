@@ -59,7 +59,7 @@ const formElems = () => {
     }
   } catch (error) {
     console.error(error)
-    alertMessage(error);
+    alertMessage(error.message)
   }
 }
 
