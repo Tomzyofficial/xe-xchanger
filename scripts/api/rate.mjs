@@ -6,25 +6,24 @@ export const rateApi = "https://v6.exchangerate-api.com/v6/eca3ba2941590b081aed7
 
 async function currencyConverter() {
   const amount = qs("input").value;
-  const from = qs("#from-currency").value
-  const to = qs("#to-currency").value
-  let message = qs("#message")
+  const from = qs("#from-currency").value;
+  const to = qs("#to-currency").value;
+  let message = qs("#message");
 
-  const rate = await fetch(rateApi)
-  const data = await rate.json()
+  const rate = await fetch(rateApi);
+  const data = await rate.json();
 
   try {
 
+    if (!amount || isNaN(amount) || amount.trim === "") {
+      message.textContent = "Please enter a valid number.";
+      return;
+    }
+    // if user doesn't select currency to convert from and currency to convert to
     if (rate.ok) {
       const result = data.conversion_rates;
-      if (!amount || isNaN(amount) || amount.trim === "") {
-        message.textContent = "Please enter a valid number."
-        return;
-      }
-
-      // if user doesn't select currency to convert from and currency to convert to
       if (!result[from] || !result[to]) {
-        message.textContent = "Choose currency to convert."
+        message.textContent = "Choose currency to convert.";
         return;
       }
 
@@ -49,8 +48,6 @@ async function currencyConverter() {
   }
 }
 
-
-
 async function reverseCurrencyConverter() {
   const amount = qs("input").value;
   const from = qs("#from-currency").value
@@ -62,12 +59,13 @@ async function reverseCurrencyConverter() {
 
   try {
 
+    if (!amount || isNaN(amount) || amount.trim === "") {
+      message.textContent = "Please enter a valid number."
+      return;
+    }
+
     if (rate.ok) {
       const result = data.conversion_rates;
-      if (!amount || isNaN(amount) || amount.trim === "") {
-        message.textContent = "Please enter a valid number."
-        return;
-      }
 
       if (!result[from] || !result[to]) {
         message.textContent = "Choose currency to convert."

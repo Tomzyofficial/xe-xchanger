@@ -1,102 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="icon" href="images/logo.webp" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End google fonts -->
+    <script src="scripts/main.js" type="module"></script>
+    <title>Xe-xchanger - Home</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/index.css">
-  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-  <link rel="icon" href="images/logo.webp">
-  <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <!-- End google fonts -->
-  <script src="scripts/main.js" type="module"></script>
-  <title>Home | Xe-xchanger</title>
-</head>
-
-<body>
-  <header>
-    <div id="site-logo">
-      <a href="/">
-        <img src="images/logo.webp" alt="Site Logo">
-      </a>
-    </div>
-    <nav>
-      <div class="nav-top">
-        <a href="signin.html">Sign in</a>
-        <span>
-          <i class="fa fa-adjust"></i>
-          <ul>
-            <li class="light-mode" data-theme="light">Light mode</li>
-            <li class="dark-mode" data-theme="dark">Dark mode</li>
-          </ul>
-        </span>
+  <body>
+    <header>
+      <div id="site-logo">
+        <a href="/">
+          <img src="images/logo.webp" alt="Site Logo" />
+        </a>
       </div>
-      <div class="nav-menu">
-        <div class="menu-icon">
-          <i class="fa fa-bars"></i>
+      <nav>
+        <div class="nav-top">
+          <!-- <a href="signin.html">Sign in</a> -->
+          <span>
+            <i class="fa fa-adjust"></i>
+            <ul>
+              <li class="light-mode" data-theme="light">Light mode</li>
+              <li class="dark-mode" data-theme="dark">Dark mode</li>
+            </ul>
+          </span>
         </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <div class="container">
-      <div class="content">
-        <h1>Welcome to Xe-xchanger</h1>
-        <p>Your one-stop solution for currency exchange.</p>
-      </div>
-      <div class="main-wrapper">
-        <div class="top">
-          <input type="text" placeholder="Amount (e.g. 5000)" name="amount" autocomplete="off">
-          <div class="from-select">
-            <select name="from-currency" id="from-currency">
-              <option value="" selected>From</option>
-            </select>
-          </div>
-          <div class="arrow-icons">
-            <p>
-              <i class="fa fa-arrow-left"></i>
-            </p>
-            <p>
-              <i class="fa fa-arrow-right"></i>
-            </p>
-          </div>
-          <div class="to-select">
-            <select name="to-currency" id="to-currency">
-              <option value="" selected>To</option>
-            </select>
+        <div class="nav-menu">
+          <div class="menu-icon">
+            <i class="fa fa-bars"></i>
           </div>
         </div>
-        <div class="bottom">
-          <p id="message"></p>
-          <button id="convert-btn">Convert</button>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="content">
+          <h1>Welcome to Xe-xchanger</h1>
+          <p>Your one-stop solution for currency exchange.</p>
+        </div>
+        <div class="main-wrapper">
+          <div class="top">
+            <input
+              type="text"
+              placeholder="Amount (e.g. 5000)"
+              name="amount"
+              autocomplete="off"
+            />
+            <div class="from-select">
+              <select name="from-currency" id="from-currency">
+                <option value="" selected>From</option>
+              </select>
+            </div>
+            <div class="arrow-icons">
+              <p>
+                <i class="fa fa-arrow-left"></i>
+              </p>
+              <p>
+                <i class="fa fa-arrow-right"></i>
+              </p>
+            </div>
+            <div class="to-select">
+              <select name="to-currency" id="to-currency">
+                <option value="" selected>To</option>
+              </select>
+            </div>
+          </div>
+          <div class="bottom">
+            <p id="message"></p>
+            <button id="convert-btn">Convert</button>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-  <section>
-    <div class="side-content">
-      <div class="write-up">
-        <h2>International currency converter made easy</h2>
-        <p>Xe-xchanger is dedicated to providing the best currency exchange rates and services.</p>
-        <div class="quick-links">
-          <a href="signin.html">Sign in</a>
-          <a href="signup.html">Sign up</a>
+    </main>
+    <section>
+      <div class="side-content">
+        <div class="write-up">
+          <h2>International currency converter made easy</h2>
+          <p>
+            Xe-xchanger is dedicated to providing the best currency exchange
+            rates and services.
+          </p>
+          <!--  <div class="quick-links">
+            <a href="signin.html">Sign in</a>
+            <a href="signup.html">Sign up</a>
+          </div> -->
         </div>
       </div>
-    </div>
-    <div class="side-image">
-      <img src="images/xe-app-hands-mockup.webp" alt="Side Image">
-    </div>
-  </section>
-  <footer>
-    <hr>
-    <p class="site-watermark">&copy; <span class="current-year">2025</span> Xe-xchanger. All rights reserved.</p>
-  </footer>
-
-</body>
-
+      <div class="side-image">
+        <img src="images/xe-app-hands-mockup.webp" alt="Side Image" />
+      </div>
+    </section>
+    <footer>
+      <hr />
+      <p class="site-watermark">
+        &copy; <span class="current-year">2025</span> Xe-xchanger. All rights
+        reserved.
+      </p>
+    </footer>
+  </body>
 </html>
